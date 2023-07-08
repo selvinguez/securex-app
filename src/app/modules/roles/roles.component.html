@@ -1,0 +1,16 @@
+<div class="roles-container">
+    <div class="roles-header">
+      <h1 class="roles-title">Roles</h1>
+      <button class="create-button" (click)="crearRol()">Crear</button>
+    </div>
+  
+    <div class="roles-input">
+      <input type="text" [(ngModel)]="nuevoRol" placeholder="Nombre del rol" />
+    </div>
+  
+    <ul class="roles-list">
+      <li *ngFor="let rol of roles" class="roles-item">{{ rol }}</li>
+      <li *ngIf="roles.length === 0" class="roles-empty">No hay roles disponibles</li>
+    </ul>
+  </div>
+  
